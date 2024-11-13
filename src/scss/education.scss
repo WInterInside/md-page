@@ -1,0 +1,15 @@
+
+.education {
+	&__timeline {
+		width: 100%;
+	
+		@media only screen and (max-width: 1200px) {
+			margin-left: -80px;
+			width: calc(100% + 160px)
+		}
+
+		@media only screen and (max-width: 796px) {
+			display: none;
+		}
+	}
+}
