@@ -20,7 +20,7 @@
 			background-color: #F1F1F1;
 		}
 
-		& a {
+		&-link {
 			display: flex;
 			color: #1A1A1ADB;
 			text-transform: uppercase;
@@ -32,6 +32,10 @@
 			letter-spacing: 0.02em;
 
 			transition: color .3s, background-color .3s, opacity .3s, box-shadow .3s;
+
+			&--light {
+				color: #F1F1F1;
+			}
 
 			@media (hover: hover) {
 				&:hover {
@@ -74,71 +78,21 @@
 
 .nav-dynamic {
 	width: 100%;
+	padding: 4px 0;
 	position: fixed;
 	left: 0;
 	z-index: 11;
 	transition: transform .5s;
 	pointer-events: none;
 	transform: translateY(-100%);
-	background-color: #33af73;
-
-	&__list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		justify-content: space-between;
-	}
-
-	&__item {
-		flex-shrink: 0;
-		border-radius: 64px;
-		overflow: hidden;
-
-		&.is-current {
-			background-color: #F1F1F1;
-		}
-
-		& a {
-			display: flex;
-			color: #1A1A1ADB;
-			text-transform: uppercase;
-			padding: 20px 32px;
-
-			font-size: 18px;
-			font-weight: 500;
-			line-height: 25px;
-			letter-spacing: 0.02em;
-
-			transition: color .3s, background-color .3s, opacity .3s, box-shadow .3s;
-
-			@media (hover: hover) {
-				&:hover {
-					opacity: .7;
-				}
-			}
-		}
-
-		@media only screen and (max-width: 1690px) {
-			& a {
-				padding: 20px;
-			}
-		}
-
-		@media only screen and (max-width: 900px) {
-			& a {
-				padding: 10px 16px;
-				font-size: 14px;
-				line-height: 20px;
-			}
-		}
-	}
+	background-color: #33af73e6;
+	backdrop-filter: blur(5px);
+	border-bottom: 2px solid #2c9864;
 
 	@media only screen and (max-width: 900px) {
 		overflow-x: scroll;
 	}
 }
-
 
 .scrollable-nav-container {
 	// @media only screen and (max-width: 769px) {

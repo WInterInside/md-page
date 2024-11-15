@@ -19,7 +19,6 @@
 			align-items: center;
 			justify-content: center;
 			gap: 16px;
-
 			padding: 20px 0;
 		}
 	}
@@ -51,12 +50,12 @@
 				font-size: 10px;
 				line-height: 16px;
 			}
-	
+
 			&-name {
 				font-size: 32px;
 				line-height: 41px;
 			}
-	
+
 		}
 	}
 
@@ -118,102 +117,6 @@
 		}
 	}
 
-	&__nav {
-		display: none;
-		width: 100%;
-		background-color: #66a316d4;
-		padding: 14px 0;
-		margin-top: 50px;
-		position: relative;
-		transition: opacity .3s, transform .3s, margin .3s;
-		backdrop-filter: blur(5px);
-
-		&-list {
-			position: relative;
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			display: flex;
-			width: 100%;
-			justify-content: space-between;
-			font-weight: 600;
-			font-size: 18px;
-			line-height: 25px;
-			text-transform: uppercase;
-		}
-
-		&-item {
-
-			& a {
-				color: #ffffff;
-				transition: opacity .3s;
-
-				&:hover {
-					opacity: .7;
-				}
-			}
-		}
-
-		@media only screen and (max-width: 769px) {
-			pointer-events: none;
-			opacity: 0;
-			transform: translateX(-100%);
-			position: absolute;
-			z-index: 10;
-			top: 36px;
-			left: 0;
-
-			&-list {
-				flex-direction: column;
-				gap: 10px;
-				text-align: center;
-			}
-		}
-	}
-
-	&__burger {
-		align-self: flex-start;
-		// display: flex;		
-		display: none;
-		flex-direction: column;
-		justify-content: center;
-		width: 46px;
-		height: 46px;
-		border-radius: 6px;
-		background-color: #66A316;
-		flex-shrink: 0;
-		padding: 8px;
-		position: relative;
-		z-index: 3;
-		cursor: pointer;
-		transition: background-color .3s;
-
-		& i {
-			display: block;
-			height: 3px;
-			width: 100%;
-			border-radius: 2px;
-			background: #fff;
-			left: 0;
-			top: 0;
-			margin-bottom: 6px;
-
-			&:first-child {
-				width: 50%;
-			}
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-
-		@media (hover: hover) {
-			&:hover {
-				background-color: darken($color: #66A316, $amount: 5%);
-			}
-		}
-	}
-
 	.social {
 		display: flex;
 		gap: 8px;
@@ -245,12 +148,4 @@
 			display: none;
 		}
 	}
-}
-
-body.is-nav-open {
-
-}
-
-body.is-scrolled {
-
 }

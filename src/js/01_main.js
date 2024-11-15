@@ -51,12 +51,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	input.addEventListener("keydown", mask, false)
 });
 
-$('.slider').slick({
-	dots: true,
-	infinite: true,
-	speed: 300,
-	slidesToShow: 2,
-	adaptiveHeight: true
+$(document).ready(function() {
+	var $slider = $('.slider-certificats');
+
+	// Инициализация слайдера без элементов управления
+	$slider.slick({
+		arrows: false,           // Отключаем стрелки
+		dots: false,             // Отключаем точки
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		initialSlide: 0,         // Начальный слайд
+		speed: 300,
+		centerMode: true,        // Включаем центрирование для отступов
+		variableWidth: false,    // Выравнивание слайдов по ширине
+		focusOnSelect: false,    // Отключение фокусировки при выборе
+		slidesToShow: 4,         // Показывать 4 слайда на десктопе
+		responsive: [
+			{                       // Настройки для планшетов
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3     // Показывать 3 слайда на планшетах
+				}
+			},
+			{                       // Настройки для мобильных устройств
+				breakpoint: 796,
+				settings: {
+					slidesToShow: 1     // Показывать 1 слайд на телефонах
+				}
+			}
+		]
+	});
+
+	// Обработчик нажатия на кнопку prev
+	$('.slider__controls-button--prew').on('click', function() {
+		$slider.slick('slickPrev');  // Переход к предыдущему слайду
+	});
+
+	// Обработчик нажатия на кнопку next
+	$('.slider__controls-button--next').on('click', function() {
+		$slider.slick('slickNext');  // Переход к следующему слайду
+	});
 });
 
 // Функция для изменения классов

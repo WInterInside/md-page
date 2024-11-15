@@ -1,0 +1,62 @@
+.slider {
+	margin-bottom: 160px;
+
+	@media only screen and (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 42px;
+		align-items: center;
+	}
+
+	&__controls {
+		display: flex;
+		gap: 8px;
+
+		&-button {
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			border: 2px solid #00000029;
+			background-color: #ffffff;
+			transition: background-color .3s;
+
+			@media (hover: hover) {
+
+				&:hover {
+					background-color: darken($color: #ffffff, $amount: 10%);
+				}
+
+			}
+		}
+
+		@media only screen and (max-width: 900px) {
+			display: none;
+		}
+	}
+
+
+	.slider-certificats {
+		width: 100%;
+
+		.slick-slide {
+			margin: 0 16px;
+
+			@media only screen and (max-width: 900px) {
+				margin: 0 6px;
+			}
+		}
+
+		.slide {
+			overflow: hidden;
+
+			& img {
+				object-fit: cover;
+				border-radius: 8px;
+			}
+		}
+	}
+}
