@@ -1070,8 +1070,8 @@ body.is-scroll .nav-dynamic {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: top center;
+     object-position: top center;
 }
 .slider .slider-blog {
   width: 100%;
@@ -1111,8 +1111,8 @@ body.is-scroll .nav-dynamic {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
 }
 .slider .slider-blog .slide::before {
   content: "";

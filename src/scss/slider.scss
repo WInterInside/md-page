@@ -67,7 +67,6 @@
 		height: 100%;
 	}
 
-
 	.slider-certificats {
 		width: 100%;
 
@@ -104,7 +103,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				object-position: top;
+				object-position: top center;
 			}
 
 			// @media only screen and (max-width: 900px) {
@@ -149,7 +148,7 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				object-position: top;
+				object-position: center;
 			}
 
 			&::before {
@@ -170,10 +169,6 @@
 					}
 				}
 			}
-
-			// @media only screen and (max-width: 900px) {
-			// 	min-width: calc(100vw - 40px)
-			// }
 		}
 	}
 }
