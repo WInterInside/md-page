@@ -1,8 +1,16 @@
 .slider {
 	margin-bottom: 160px;
 
+	&--news {
+		margin-bottom: 64px;
+	}
+
 	@media only screen and (max-width: 1199px) {
 		margin-bottom: 60px;
+
+		&--news {
+			margin-bottom: 34px;
+		}
 	}
 
 	&__more {
@@ -235,7 +243,7 @@
 	}
 }
 
-.reviews {
+.news {
 	&__caption {
 		font-size: 64px;
 		font-weight: 500;
@@ -255,6 +263,10 @@
 		height: 100%;
 		width: 100%;
 		padding: 48px;
+
+		@media only screen and (max-width: 900px) {
+			padding: 20px;
+		}
 
 		&__rating {
 			margin-bottom: 16px;
@@ -319,6 +331,8 @@
 		}
 
 		&__more{
+			position: relative;
+			z-index: 10;
 			font-family: Manrope;
 			font-size: 16px;
 			font-weight: 800;
@@ -337,5 +351,114 @@
 			}
 		}
 	}
+}
 
+.reviews {
+	&__caption {
+		font-size: 64px;
+		font-weight: 500;
+		line-height: 70.4px;
+		letter-spacing: -0.02em;
+
+		@media only screen and (max-width: 900px) {
+			font-size: 44px;
+			line-height: 50.4px;
+		}
+	}
+	
+	.review {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		padding: 48px;
+
+		@media only screen and (max-width: 900px) {
+			padding: 20px;
+		}
+
+		&__rating {
+			margin-bottom: 16px;
+
+			&-value,
+			&-line {
+				display: flex;
+			}
+
+			&-line {
+				position: relative;
+			}
+
+			&-value {
+				position: absolute;
+				left: 0;
+			}
+		}
+
+		&__name {
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 26px;
+			letter-spacing: -0.01em;
+			text-align: left;
+			color: #313131;
+			margin-bottom: 32px;
+		}
+
+		&__text {
+			margin: 0;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 20.8px;
+			letter-spacing: 0.01em;
+			color: #1A1A1AB8;
+			margin-bottom: 32px;
+
+			&--cutted {
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				-webkit-line-clamp: 5; /* Здесь указываем количество строк */
+				overflow: hidden;
+				text-overflow: ellipsis; /* Добавляет многоточие в конце */
+			}
+		}
+
+		&__controls {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			margin-top: auto;
+		}
+
+		&__data {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 18.2px;
+			letter-spacing: 0.01em;
+			text-align: left;
+			color: #0000003D;
+		}
+
+		&__more{
+			position: relative;
+			z-index: 10;
+			font-family: Manrope;
+			font-size: 16px;
+			font-weight: 800;
+			line-height: 20.8px;
+			letter-spacing: 0.01em;
+			text-align: left;
+			text-transform: uppercase;
+			color: #0B766B;
+
+			transition: opacity .3s;
+
+			@media (hover: hover) {
+				&:hover {
+					opacity: .7;
+				}
+			}
+		}
+	}
 }
