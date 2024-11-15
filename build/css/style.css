@@ -1126,6 +1126,7 @@ body.is-scroll .nav-dynamic {
 @media only screen and (max-width: 796px) {
   .slider .slider-blog .slick-slide {
     min-width: auto;
+    height: 316px;
   }
 }
 @media (hover: hover) {
@@ -1138,6 +1139,11 @@ body.is-scroll .nav-dynamic {
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
+}
+@media only screen and (max-width: 900px) {
+  .slider .slider-blog .slick-track {
+    gap: 8px;
+  }
 }
 
 .certificats__caption {

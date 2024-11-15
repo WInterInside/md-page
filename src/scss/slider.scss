@@ -58,11 +58,9 @@
 			transition: background-color .3s;
 
 			@media (hover: hover) {
-
 				&:hover {
 					background-color: darken($color: #ffffff, $amount: 10%);
 				}
-
 			}
 		}
 
@@ -150,6 +148,7 @@
 
 			@media only screen and (max-width: 796px) {
 				min-width: auto;
+				height: 316px;
 			}
 
 			@media (hover: hover) {
@@ -164,6 +163,9 @@
 		.slick-track {
 			display: flex;
 			gap: 16px;
+			@media only screen and (max-width: 900px) {
+				gap: 8px;
+			}
 		}
 	}
 }
