@@ -59,7 +59,7 @@ $(document).ready(function() {
 		arrows: false,           // Отключаем стрелки
 		dots: false,             // Отключаем точки
 		infinite: true,
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		initialSlide: 0,         // Начальный слайд
 		speed: 300,
@@ -102,7 +102,7 @@ $(document).ready(function() {
 		arrows: false,           // Отключаем стрелки
 		dots: false,             // Отключаем точки
 		infinite: true,
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 3000,
 		initialSlide: 0,         // Начальный слайд
 		speed: 300,
@@ -137,6 +137,49 @@ $(document).ready(function() {
 	});
 });
 
+$(document).ready(function() {
+	var $slider = $('.slider-reviews');
+
+	// Инициализация слайдера без элементов управления
+	$slider.slick({
+		arrows: false,           // Отключаем стрелки
+		dots: false,             // Отключаем точки
+		infinite: true,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		initialSlide: 0,         // Начальный слайд
+		speed: 300,
+		centerMode: true,        // Включаем центрирование для отступов
+		variableWidth: false,    // Выравнивание слайдов по ширине
+		focusOnSelect: false,    // Отключение фокусировки при выборе
+		slidesToShow: 4,         // Показывать 4 слайда на десктопе
+		responsive: [
+			{                       // Настройки для планшетов
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 3     // Показывать 3 слайда на планшетах
+				}
+			},
+			{                       // Настройки для мобильных устройств
+				breakpoint: 796,
+				settings: {
+					slidesToShow: 1     // Показывать 1 слайд на телефонах
+				}
+			}
+		]
+	});
+
+	// Обработчик нажатия на кнопку prev
+	$('.slider__controls-rev-button--prew').on('click', function() {
+		$slider.slick('slickPrev');  // Переход к предыдущему слайду
+	});
+
+	// Обработчик нажатия на кнопку next
+	$('.slider__controls-rev-button--next').on('click', function() {
+		$slider.slick('slickNext');  // Переход к следующему слайду
+	});
+});
+
 // Функция для изменения классов
 const updateNavClasses = () => {
 	const scrollPosition = window.scrollY;
@@ -148,6 +191,25 @@ const updateNavClasses = () => {
 		body.classList.remove('is-scroll');
 	}
 }
+
+const buttons = document.querySelectorAll('.review__more');
+
+buttons.forEach(button => {
+	button.addEventListener('click', function() {
+	  // Находим родительский элемент <p> для этой кнопки
+	  const reviewText = button.closest('.review__controls').previousElementSibling;
+
+	  // Удаляем класс .review__text--cutted
+	  reviewText.classList.toggle('review__text--cutted');
+	  
+	  // Изменяем текст кнопки (по желанию)
+	  if (reviewText.classList.contains('review__text--cutted')) {
+		button.textContent = 'Читать полностью';
+	  } else {
+		button.textContent = 'Скрыть';
+	  }
+	});
+  });
 
 updateNavClasses();
 // Навешиваем обработчик события прокрутки

@@ -954,6 +954,7 @@ body.is-scroll .nav-dynamic {
   opacity: 1;
   pointer-events: auto;
 }
+@charset "UTF-8";
 .slider {
   margin-bottom: 160px;
 }
@@ -1057,7 +1058,6 @@ body.is-scroll .nav-dynamic {
 }
 .slider .slider-certificats {
   width: 100%;
-  /* the slides */
 }
 .slider .slider-certificats .slick-slide {
   overflow: hidden;
@@ -1093,7 +1093,6 @@ body.is-scroll .nav-dynamic {
 }
 .slider .slider-blog {
   width: 100%;
-  /* the slides */
 }
 .slider .slider-blog .slick-slide {
   overflow: hidden;
@@ -1145,6 +1144,41 @@ body.is-scroll .nav-dynamic {
     gap: 8px;
   }
 }
+.slider .slider-reviews {
+  width: 100%;
+}
+.slider .slider-reviews .slick-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  min-height: 427px;
+  min-width: 408px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid rgba(26, 26, 26, 0.1607843137);
+}
+@media only screen and (max-width: 796px) {
+  .slider .slider-reviews .slick-slide {
+    min-width: auto;
+  }
+}
+.slider .slider-reviews .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+@media only screen and (max-width: 900px) {
+  .slider .slider-reviews .slick-track {
+    gap: 8px;
+  }
+}
 
 .certificats__caption {
   font-size: 64px;
@@ -1182,6 +1216,96 @@ body.is-scroll .nav-dynamic {
   .reviews__caption {
     font-size: 44px;
     line-height: 50.4px;
+  }
+}
+.reviews .review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 48px;
+}
+.reviews .review__rating {
+  margin-bottom: 16px;
+}
+.reviews .review__rating-value, .reviews .review__rating-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.reviews .review__rating-line {
+  position: relative;
+}
+.reviews .review__rating-value {
+  position: absolute;
+  left: 0;
+}
+.reviews .review__name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  color: #313131;
+  margin-bottom: 32px;
+}
+.reviews .review__text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.8px;
+  letter-spacing: 0.01em;
+  color: rgba(26, 26, 26, 0.7215686275);
+  margin-bottom: 32px;
+}
+.reviews .review__text--cutted {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Здесь указываем количество строк */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Добавляет многоточие в конце */
+}
+.reviews .review__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+}
+.reviews .review__data {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.2px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.2392156863);
+}
+.reviews .review__more {
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20.8px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #0B766B;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+@media (hover: hover) {
+  .reviews .review__more:hover {
+    opacity: 0.7;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
