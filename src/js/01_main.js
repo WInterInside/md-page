@@ -59,7 +59,7 @@ $(document).ready(function() {
 		arrows: false,           // Отключаем стрелки
 		dots: false,             // Отключаем точки
 		infinite: true,
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 3000,
 		initialSlide: 0,         // Начальный слайд
 		speed: 300,
@@ -102,7 +102,7 @@ $(document).ready(function() {
 		arrows: false,           // Отключаем стрелки
 		dots: false,             // Отключаем точки
 		infinite: true,
-		autoplay: true,
+		// autoplay: true,
 		autoplaySpeed: 3000,
 		initialSlide: 0,         // Начальный слайд
 		speed: 300,
