@@ -1,0 +1,69 @@
+.consultation {
+	margin-bottom: 160px;
+
+	@media only screen and (max-width: 1199px) {
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		display: flex;
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: 65%;
+		gap: 50px;
+		background-color: aquamarine;
+		padding-right: 84px;
+	}
+
+	&__left {
+		position: absolute;
+		top: 50%;
+		right: 0;
+
+		display: flex;
+		width: 52px;
+		height: 52px;
+		border: 2px solid #00000029;
+		background-color: #ffffff;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+	}
+
+	&__warning {
+		display: flex;
+		gap: 24px;
+		align-items: center;
+
+		&-text {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 21px;
+			letter-spacing: 0.01em;
+			color: #1A1A1A6B;
+		}
+	}
+
+	&__heading {
+		font-size: 64px;
+		font-weight: 500;
+		line-height: 70.4px;
+		letter-spacing: -0.02em;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;		
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: 33%;
+	}
+}
