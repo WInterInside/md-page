@@ -1477,6 +1477,11 @@ body.is-scroll .nav-dynamic {
     display: none;
   }
 }
+@media only screen and (max-width: 900px) {
+  .slider__controls-news {
+    margin: 0;
+  }
+}
 .slider__icon {
   position: absolute;
   z-index: 11;
