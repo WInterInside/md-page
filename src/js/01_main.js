@@ -1,9 +1,18 @@
 const body = document.body;
-// Получаем элемент навигации
 const nav = document.querySelector('[data-element="nav"]');
-
-// Определяем начальную позицию навигации
+const buttonNewsMore = document.querySelector('.slider__more-news');
 const initialNavPosition = nav.offsetTop;
+
+const updateNavClasses = () => {
+	const scrollPosition = window.scrollY;
+	if (scrollPosition > initialNavPosition) {
+		body.classList.add('is-scroll');
+	} else {
+		body.classList.remove('is-scroll');
+	}
+}
+
+updateNavClasses();
 
 // прокрутка статьи
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -17,6 +26,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 			window.scrollTo({ top: topOfDestination, behavior: "smooth" });
 		}
 	});
+});
+
+window.addEventListener('scroll', updateNavClasses);
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Функция создания карты
+	function createMap(xID, coords) {
+		const mapContainer = document.getElementById(xID);
+		if (mapContainer) {
+			ymaps.ready(function () {
+				const myMap = new ymaps.Map(xID, {
+					center: coords,
+					zoom: 17,
+					controls: []
+				});
+
+				const myPlacemark = new ymaps.Placemark(coords,
+					{
+						hintContent: 'Симферополь. ул. Тургенева 20',
+						balloonContent: 'Симферополь. ул. Тургенева 20'
+					},
+					{
+						iconLayout: 'default#image',
+						iconImageHref: 'img/pin.svg',
+						iconImageSize: [59, 84],
+						iconImageOffset: [-30, -100]
+					}
+				);
+
+				myMap.geoObjects.add(myPlacemark);
+				myMap.behaviors.disable('scrollZoom');
+			});
+		} else {
+			console.error("Элемент с ID", xID, "не найден.");
+		}
+	}
+
+	// Вызов функции создания карты
+	createMap('map', [44.953162, 34.114215]);
 });
 
 [].forEach.call( document.querySelectorAll('.form__input--tel'), function(input) {
@@ -51,6 +99,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	input.addEventListener("keydown", mask, false)
 });
 
+
+// слайдеры и контролы
 $(document).ready(function() {
 	var $slider = $('.slider-certificats');
 
@@ -186,32 +236,10 @@ $(document).ready(function() {
 
 	// Инициализация слайдера без элементов управления
 	$slider.slick({
-		arrows: false,           // Отключаем стрелки
-		dots: false,             // Отключаем точки
+		dots: false,
 		infinite: true,
-		// autoplay: true,
-		accessibility: true, // убедитесь, что доступность включена
-		autoplaySpeed: 3000,
-		initialSlide: 0,         // Начальный слайд
 		speed: 300,
-		centerMode: true,        // Включаем центрирование для отступов
-		variableWidth: false,    // Выравнивание слайдов по ширине
-		focusOnSelect: false,    // Отключение фокусировки при выборе
-		slidesToShow: 1,         // Показывать 4 слайда на десктопе
-		responsive: [
-			{                       // Настройки для планшетов
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3     // Показывать 3 слайда на планшетах
-				}
-			},
-			{                       // Настройки для мобильных устройств
-				breakpoint: 796,
-				settings: {
-					slidesToShow: 1     // Показывать 1 слайд на телефонах
-				}
-			}
-		]
+		arrows: false,           // Отключаем стрелки
 	});
 
 	// Обработчик нажатия на кнопку prev
@@ -227,70 +255,17 @@ $(document).ready(function() {
 
 $('.slider-reviews').on('click', '.review__more', function(e) {
 	e.preventDefault();
-	
+
 	// Находим родительский элемент <p> для этой кнопки
 	const reviewText = $(this).closest('.review__controls').prev();
 
 	// Переключаем класс .review__text--cutted
 	reviewText.toggleClass('review__text--cutted');
-	
+
 	// Изменяем текст кнопки
 	if (reviewText.hasClass('review__text--cutted')) {
 		$(this).text('Читать полностью');
 	} else {
 		$(this).text('Скрыть');
 	}
-});
-
-// Функция для изменения классов
-const updateNavClasses = () => {
-	const scrollPosition = window.scrollY;
-
-	// Если навигация скрылась из вида
-	if (scrollPosition > initialNavPosition) {
-		body.classList.add('is-scroll');
-	} else {
-		body.classList.remove('is-scroll');
-	}
-}
-
-updateNavClasses();
-// Навешиваем обработчик события прокрутки
-window.addEventListener('scroll', updateNavClasses);
-
-document.addEventListener("DOMContentLoaded", function () {
-	// Функция создания карты
-	function createMap(xID, coords) {
-		const mapContainer = document.getElementById(xID);
-		if (mapContainer) {
-			ymaps.ready(function () {
-				const myMap = new ymaps.Map(xID, {
-					center: coords,
-					zoom: 17,
-					controls: []
-				});
-
-				const myPlacemark = new ymaps.Placemark(coords,
-					{
-						hintContent: 'Симферополь. ул. Тургенева 20',
-						balloonContent: 'Симферополь. ул. Тургенева 20'
-					},
-					{
-						iconLayout: 'default#image',
-						iconImageHref: 'img/pin.svg',
-						iconImageSize: [59, 84],
-						iconImageOffset: [-30, -100]
-					}
-				);
-
-				myMap.geoObjects.add(myPlacemark);
-				myMap.behaviors.disable('scrollZoom');
-			});
-		} else {
-			console.error("Элемент с ID", xID, "не найден.");
-		}
-	}
-
-	// Вызов функции создания карты
-	createMap('map', [44.953162, 34.114215]);
 });

@@ -34,13 +34,6 @@
 		<header class="header" data-element="header">
 	<div class="container">
 		<div class="header__wrapper">
-
-			<!-- <button class="header__burger" data-element="navToggle">
-				<i></i>
-				<i></i>
-				<i></i>
-			</button> -->
-
 			<a href="/" class="header__logo">
 				<span class="header__logo-name">MEDICAL</span>
 				<span class="header__logo-caption">Личный сайт Никоненко <br> Елены Николаевны</span>
@@ -56,7 +49,7 @@
 				<a class="header__contacts-mail" href="mailto:elena_nikolaevna@mail.ru">elena_nikolaevna@mail.ru</a>
 			</div>
 
-			<a class="header__button button" href="">Заказать звонок</a>
+			<a class="header__button button" href="#consultation">Заказать звонок</a>
 
 			<div class="social">
 				<a href="" class="social__icon">
@@ -79,20 +72,20 @@
 				<div class="container">
 					<div class="scrollable-nav__container">
 						<ul class="nav__list">
-							<li class="nav__item is-current">
-								<a class="nav__item-link" href="/">о враче</a>
+							<li class="nav__item is-current-">
+								<a class="nav__item-link nav__item-link--light" href="#education">о враче</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__item-link nav__item-link--light" href="/">сертификаты</a>
+								<a class="nav__item-link nav__item-link--light" href="#certificats">сертификаты</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__item-link nav__item-link--light" href="/">блог</a>
+								<a class="nav__item-link nav__item-link--light" href="#blog">блог</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__item-link nav__item-link--light" href="/">контакты</a>
+								<a class="nav__item-link nav__item-link--light" href="#contacts">контакты</a>
 							</li>
 							<li class="nav__item">
-								<a class="nav__item-link nav__item-link--light" href="/">статьи</a>
+								<a class="nav__item-link nav__item-link--light" href="#news">статьи</a>
 							</li>
 						</ul>
 					</div>
@@ -108,20 +101,20 @@
 
 								<div class="scrollable-nav__container">
 									<ul class="nav__list">
-										<li class="nav__item is-current">
-											<a class="nav__item-link" href="/">о враче</a>
+										<li class="nav__item is-current-">
+											<a class="nav__item-link" href="#education">о враче</a>
 										</li>
 										<li class="nav__item">
-											<a class="nav__item-link" href="/">сертификаты</a>
+											<a class="nav__item-link" href="#certificats">сертификаты</a>
 										</li>
 										<li class="nav__item">
-											<a class="nav__item-link" href="/">блог</a>
+											<a class="nav__item-link" href="#blog">блог</a>
 										</li>
 										<li class="nav__item">
-											<a class="nav__item-link" href="/">контакты</a>
+											<a class="nav__item-link" href="#contacts">контакты</a>
 										</li>
 										<li class="nav__item">
-											<a class="nav__item-link" href="/">статьи</a>
+											<a class="nav__item-link" href="#news">статьи</a>
 										</li>
 									</ul>
 								</div>
@@ -190,7 +183,7 @@
 				</div>
 			</section>
 
-			<section class="certificats slider">
+			<section id="certificats" class="certificats slider">
 				<div class="container">
 					<div class="slider__header">
 						<h2 class="certificats__caption">Сертификаты</h2>
@@ -233,7 +226,7 @@
 				</div>
 			</section>
 
-			<section class="blog slider">
+			<section id="blog" class="blog slider">
 				<div class="container">
 					<div class="slider__header">
 						<div class="slider__header-wrapper">
@@ -292,7 +285,7 @@
 				</div>
 			</section>
 
-			<section class="education">
+			<section id="education" class="education">
 				<div class="container">
 					<h2 class="education__caption">Образование</h2>
 
@@ -476,7 +469,7 @@
 				</div>
 			</section>
 
-			<section class="consultation">
+			<section id="consultation" class="consultation">
 				<div class="container">
 					<div class="consultation__content">
 						<div class="consultation__wrapper">
@@ -485,7 +478,7 @@
 							<ul class="consultation__list">
 								<li class="consultation__item">
 									<span class="consultation__icon">
-										<img src="img/needs/needs.jpg" alt="">
+										<img src="img/needs/needs3.jpg" alt="">
 										<span class="consultation__icon-lightning">
 											<svg class="svg-icon" viewBox="0 0 32 33" width="32" height="32"><use xlink:href="img/sprite.svg#sprite--lightning"></use></svg>
 										</span>
@@ -494,6 +487,7 @@
 										Хроническая боль в спине и шее
 									</span>
 								</li>
+
 								<li class="consultation__item">
 									<span class="consultation__icon">
 										<img src="img/needs/needs.jpg" alt="">
@@ -502,51 +496,55 @@
 										</span>
 									</span>
 									<span class="consultation__item-text">
-										Хроническая боль в спине и шее
+										Проблемы с осанкой и сколиоз
 									</span>
 								</li>
+
 								<li class="consultation__item">
 									<span class="consultation__icon">
-										<img src="img/needs/needs.jpg" alt="">
+										<img src="img/needs/needs4.jpg" alt="">
 										<span class="consultation__icon-lightning">
 											<svg class="svg-icon" viewBox="0 0 32 33" width="32" height="32"><use xlink:href="img/sprite.svg#sprite--lightning"></use></svg>
 										</span>
 									</span>
 									<span class="consultation__item-text">
-										Хроническая боль в спине и шее
+										Головные боли, мигрень
 									</span>
 								</li>
+
 								<li class="consultation__item">
 									<span class="consultation__icon">
-										<img src="img/needs/needs.jpg" alt="">
+										<img src="img/needs/needs1.jpg" alt="">
 										<span class="consultation__icon-lightning">
 											<svg class="svg-icon" viewBox="0 0 32 33" width="32" height="32"><use xlink:href="img/sprite.svg#sprite--lightning"></use></svg>
 										</span>
 									</span>
 									<span class="consultation__item-text">
-										Хроническая боль в спине и шее
+										Неврологические проблемы, такие как защемления нервов
 									</span>
 								</li>
+
 								<li class="consultation__item">
 									<span class="consultation__icon">
-										<img src="img/needs/needs.jpg" alt="">
+										<img src="img/needs/needs5.jpg" alt="">
 										<span class="consultation__icon-lightning">
 											<svg class="svg-icon" viewBox="0 0 32 33" width="32" height="32"><use xlink:href="img/sprite.svg#sprite--lightning"></use></svg>
 										</span>
 									</span>
 									<span class="consultation__item-text">
-										Хроническая боль в спине и шее
+										Боли в суставах и конечностях
 									</span>
 								</li>
+
 								<li class="consultation__item">
 									<span class="consultation__icon">
-										<img src="img/needs/needs.jpg" alt="">
+										<img src="img/needs/needs2.jpg" alt="">
 										<span class="consultation__icon-lightning">
 											<svg class="svg-icon" viewBox="0 0 32 33" width="32" height="32"><use xlink:href="img/sprite.svg#sprite--lightning"></use></svg>
 										</span>
 									</span>
 									<span class="consultation__item-text">
-										Хроническая боль в спине и шее
+										Послеродовое ведение
 									</span>
 								</li>
 							</ul>
@@ -566,21 +564,35 @@
 							</span>
 						</div>
 
-						<!-- <h2 class="popup__name">Обратная связь</h2> -->
-
-						<form class="form" action="">
-
-							<input class="form__input" type="text" name="name" required="" placeholder="Имя">
-							<input class="form__input form__input--tel" type="text" name="tel" required="" placeholder="Телефон" maxlength="18">
-							<textarea class="form__input" name="message" placeholder="Сообщение"></textarea>
-
-							<button class="form__button button button--green" type="submit">Отправить</button>
-
-							<div class="form__wrapper form__wrapper--agreement">
-								<input class="form__checkbox" id="agreement-doc" type="checkbox" name="agreement" checked required="">
-								<label class="form__label form__label--checkbox" for="agreement-doc">Cогласие на обработку персональных данных</label>
+						<div class="consultation__form">
+							<div class="consultation__form-header">
+								<div class="consultation__form-header-img">
+									<div class="consultation__form-header-inner-img">
+										<img src="img/form-ph.jpg" alt="">
+									</div>
+								</div>
+								<h3 class="consultation__form-name">Никоненко <br> Елена Николаевна</h3>
 							</div>
-						</form>
+							<span class="consultation__form-caption">
+								Получить консультацию главного остеопата Крыма
+							</span>
+							<form class="form" action="">
+								<input class="form__input" type="text" name="name" required="" placeholder="Ваше имя">
+								<input class="form__input form__input--mail" type="email" name="mail" required="" placeholder="E-mail">
+								<input class="form__input form__input--tel" type="text" name="tel" required="" placeholder="+7 ХХХ ХХХ ХХ ХХ" maxlength="18">
+
+								<button class="form__button button button--green" type="submit">Отправить заявку</button>
+
+								<div class="form__wrapper form__wrapper--agreement">
+									<input class="form__checkbox" id="agreement-doc" type="checkbox" name="agreement" checked required="">
+									<label class="form__label form__label--checkbox" for="agreement-doc">
+										Я согласен с политикой конфиденциальности и
+										условиями обработки персональных данных
+									</label>
+								</div>
+							</form>
+						</div>
+
 					</div>
 				</div>
 			</section>
@@ -857,7 +869,7 @@
 				</div>
 			</section>
 
-			<section class="news slider slider--news">
+			<section id="news" class="news slider slider--news">
 				<div class="container">
 					<div class="slider__header slider__header--reviews">
 						<h2 class="reviews__caption">Статьи</h2>
@@ -869,51 +881,235 @@
 								<svg class="svg-icon"  viewBox="0 0 19 12" width="19" height="12"><use xlink:href="img/sprite.svg#sprite--slider-right"></use></svg>
 							</button>
 						</div>
-						<a href="" class="slider__more button button--lightgreen button--small">Смотреть все статьи</a>
+						<a href="news.html" class="slider__more-news button button--lightgreen button--small">Смотреть все статьи</a>
 					</div>
 
-					<div class="slider-news">
-						<a class="slide" href="https://www.youtube.com/watch?v=ubluH4eNrMo" target="_blank">
-							<img src="img/blog/1.jpg" alt="slide img">
-							<span class="slider__icon">
-								<svg class="svg-icon"  viewBox="0 0 65 50" width="65" height="50"><use xlink:href="img/sprite.svg#sprite--yt-button"></use></svg>
-							</span>
-						</a>
-						<a class="slide" href="https://www.youtube.com/watch?v=ubluH4eNrMo" target="_blank">
-							<img src="img/blog/2.jpg" alt="slide img">
-							<span class="slider__icon">
-								<svg class="svg-icon"  viewBox="0 0 65 50" width="65" height="50"><use xlink:href="img/sprite.svg#sprite--yt-button"></use></svg>
-							</span>
-						</a>
-						<a class="slide" href="https://www.youtube.com/watch?v=ubluH4eNrMo" target="_blank">
-							<img src="img/blog/3.jpg" alt="slide img">
-							<span class="slider__icon">
-								<svg class="svg-icon"  viewBox="0 0 65 50" width="65" height="50"><use xlink:href="img/sprite.svg#sprite--yt-button"></use></svg>
-							</span>
-						</a>
-						<a class="slide" href="https://www.youtube.com/watch?v=ubluH4eNrMo" target="_blank">
-							<img src="img/blog/4.jpg" alt="slide img">
-							<span class="slider__icon">
-								<svg class="svg-icon"  viewBox="0 0 65 50" width="65" height="50"><use xlink:href="img/sprite.svg#sprite--yt-button"></use></svg>
-							</span>
-						</a>
-						<a class="slide" href="https://www.youtube.com/watch?v=ubluH4eNrMo" target="_blank">
-							<img src="img/blog/2.jpg" alt="slide img">
-							<span class="slider__icon">
-								<svg class="svg-icon"  viewBox="0 0 65 50" width="65" height="50"><use xlink:href="img/sprite.svg#sprite--yt-button"></use></svg>
-							</span>
-						</a>
-						<a class="slide" href="https://www.youtube.com/watch?v=ubluH4eNrMo" target="_blank">
-							<img src="img/blog/4.jpg" alt="slide img">
-							<span class="slider__icon">
-								<svg class="svg-icon"  viewBox="0 0 65 50" width="65" height="50"><use xlink:href="img/sprite.svg#sprite--yt-button"></use></svg>
-							</span>
-						</a>
+					<div data-element="slider-news" class="slider-news">
+						<div class="news__slide">
+							<div class="grid">
+								<a class="news__link" href="">
+									<img src="img/articles/news1.jpg" alt="">
+									<div class="news__link-content news__link-content--column">
+										<h3 class="news__link-heading">
+											Профилактика сердечно-сосудистых заболеваний
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news6.jpg" alt="">
+									<div class="news__link-content news__link-content--column">
+										<h3 class="news__link-heading">
+											Как остеопатия помогает при болях в спине и шее
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news7.png" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Как сохранить здоровье и продлить активное долголетие?
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news2.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Как ухаживать за ортопедическими стельками?
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news3.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Брекеты и нарушение равновесия - случай из практики остеопата
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news4.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Как остеопатия помогает при болях в спине и шее
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news5.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Безопасность процедур и методов лечения у остеопата
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+							</div>
+						</div>
+
+						<div class="news__slide">
+							<div class="grid">
+								<a class="news__link" href="">
+									<img src="img/articles/news1.jpg" alt="">
+									<div class="news__link-content news__link-content--column">
+										<h3 class="news__link-heading">
+											Профилактика сердечно-сосудистых заболеваний
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news6.jpg" alt="">
+									<div class="news__link-content news__link-content--column">
+										<h3 class="news__link-heading">
+											Как остеопатия помогает при болях в спине и шее
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news7.png" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Как сохранить здоровье и продлить активное долголетие?
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news2.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Как ухаживать за ортопедическими стельками?
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news3.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Брекеты и нарушение равновесия - случай из практики остеопата
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news4.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Как остеопатия помогает при болях в спине и шее
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+								<a class="news__link" href="">
+									<img src="img/articles/news5.jpg" alt="">
+									<div class="news__link-content">
+										<h3 class="news__link-heading">
+											Безопасность процедур и методов лечения у остеопата
+										</h3>
+										<span class="news__link-data">
+											04  окт.  2024 г.
+										</span>
+										<span class="news__icon">
+											<svg class="svg-icon" viewBox="0 0 11 18" width="11" height="18"><use xlink:href="img/sprite.svg#sprite--news-icon"></use></svg>
+										</span>
+									</div>
+								</a>
+
+							</div>
+						</div>
 					</div>
 				</div>
+
 			</section>
 
-			<section class="contacts">
+			<section id="contacts" class="contacts">
 				<div class="container">
 					<div class="contacts__map">
 						<div class="contacts__map--wrapper">

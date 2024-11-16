@@ -13,7 +13,8 @@
 		}
 	}
 
-	&__more {
+	&__more,
+	&__more-news {
 		margin-left: 24px;
 
 		@media only screen and (max-width: 900px) {
@@ -30,7 +31,8 @@
 			@media only screen and (max-width: 900px) {
 				flex-direction: column;
 				align-items: flex-start;
-				gap: 8px;
+				gap: 10px;
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -256,99 +258,262 @@
 		}
 	}
 
-	.review {
+	&__icon {
 		display: flex;
-		flex-grow: 1;
-		flex-direction: column;
-		height: 100%;
-		width: 100%;
-		padding: 48px;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		position: absolute;
+		padding-left: 5px;
+		z-index: 1;
+		bottom: 0;
+		right: 0;
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		background-color: #ffffff;
+		transition: background-color .3s;
 
-		@media only screen and (max-width: 900px) {
-			padding: 20px;
+		@media only screen and (max-width: 1300px) {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+		height: 333px;
+		padding: 20px;
+		border-radius: 16px;
+		overflow: hidden;
+
+		@media only screen and (max-width: 1500px) {
+			height: 233px;
 		}
 
-		&__rating {
-			margin-bottom: 16px;
+		@media only screen and (max-width: 1200px) {
+			height: 150px;
+		}
 
-			&-value,
-			&-line {
-				display: flex;
+		&::before {
+			content: '';
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #00000052;
+			position: absolute;
+			z-index: 1;
+			transition: background-color .3s;
+		}
+
+		&-content {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			flex-grow: 1;
+			z-index: 1;
+
+			& .news__link-heading {
+				width: 50%;
+
+				@media only screen and (max-width: 1200px) {
+					width: 100%;
+				}
 			}
 
-			&-line {
+			&--column {
 				position: relative;
-			}
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
 
-			&-value {
-				position: absolute;
-				left: 0;
+				& .news__link-heading {
+					width: 100%;
+				}
 			}
 		}
 
-		&__name {
+		&-heading {
+			display: inline-block;
+			font-family: Manrope;
 			font-size: 20px;
 			font-weight: 600;
 			line-height: 26px;
 			letter-spacing: -0.01em;
 			text-align: left;
-			color: #313131;
-			margin-bottom: 32px;
-		}
+			color: #ffffff;
+			margin-bottom: 33px;
 
-		&__text {
-			margin: 0;
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 20.8px;
-			letter-spacing: 0.01em;
-			color: #1A1A1AB8;
-			margin-bottom: 32px;
-
-			&--cutted {
-				display: -webkit-box;
-				-webkit-box-orient: vertical;
-				-webkit-line-clamp: 5; /* Здесь указываем количество строк */
-				overflow: hidden;
-				text-overflow: ellipsis; /* Добавляет многоточие в конце */
+			@media only screen and (max-width: 1500px) {
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 18px;
 			}
 		}
 
-		&__controls {
-			display: flex;
-			width: 100%;
-			justify-content: space-between;
-			margin-top: auto;
-		}
-
-		&__data {
-			font-size: 14px;
-			font-weight: 500;
-			line-height: 18.2px;
-			letter-spacing: 0.01em;
-			text-align: left;
-			color: #0000003D;
-		}
-
-		&__more{
-			position: relative;
-			z-index: 10;
+		&-data {
 			font-family: Manrope;
 			font-size: 16px;
-			font-weight: 800;
+			font-weight: 500;
 			line-height: 20.8px;
 			letter-spacing: 0.01em;
 			text-align: left;
-			text-transform: uppercase;
-			color: #0B766B;
+			color: #FFFFFFA3;
 
-			transition: opacity .3s;
+			@media only screen and (max-width: 1500px) {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 18px;
+			}
 
-			@media (hover: hover) {
-				&:hover {
-					opacity: .7;
+			@media only screen and (max-width: 1200px) {
+				display: none;
+			}
+		}
+
+		& img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@media (hover: hover) {
+			&:hover {
+				&::before {
+					background-color: transparent;
+				}
+
+				.news__icon {
+					background-color: #0B766B;
 				}
 			}
+		}
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 32px;
+		padding: 0 10px;
+
+		@media only screen and (max-width: 1500px) {
+			gap: 16px;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			gap: 8px;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			grid-template-columns: repeat(2, 1fr); /* Устанавливаем 2 колонки */
+		}
+
+		@media only screen and (max-width: 900px) {
+			display: flex;
+			flex-direction: column;
+			padding: 0 4px;
+		}
+	}
+
+	&__link:nth-child(1) {
+		height: 100%;
+		grid-row: span 2 / span 2;
+		background-color: red;
+		
+		@media only screen and (max-width: 1000px) {
+			height: 150px;
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+
+		@media only screen and (max-width: 796px) {
+			grid-row: auto;
+			align-self: stretch; /* Растягиваем элемент по всей высоте ячейки */
+		}
+	}
+
+	&__link:nth-child(2) {
+		height: 100%;
+		grid-row: span 2 / span 2;
+		background-color: green;
+		
+		@media only screen and (max-width: 1000px) {
+			height: 150px;
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+	}
+
+	&__link:nth-child(3) {
+		grid-column: span 2 / span 2;
+		background-color: #000000;
+		
+		@media only screen and (max-width: 1000px) {
+			// grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+	}
+
+	&__link:nth-child(4) {
+		grid-column: span 2 / span 2;
+		grid-column-start: 3;
+		grid-row-start: 2;
+		background-color: #0B766B;
+		
+		@media only screen and (max-width: 1000px) {
+			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+	}
+	
+	&__link:nth-child(5) {
+		grid-row-start: 3;
+		background-color: cadetblue;
+		
+		@media only screen and (max-width: 1000px) {
+			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+	}
+
+	&__link:nth-child(6) {
+		grid-column: span 2; /* Элемент займет 2 колонки */
+		grid-row-start: 3;
+		background-color: saddlebrown;
+		
+		@media only screen and (max-width: 1000px) {
+			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+	}
+
+	&__link:nth-child(7) {
+		grid-row-start: 3;
+		background-color: forestgreen;
+		
+		@media only screen and (max-width: 1000px) {
+			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column-start: auto;
+			grid-row-start: auto;	
+		}
+	}
+
+	&__link:nth-child(8) {
+		grid-row-start: 3;
+		background-color: lavenderblush;
+		
+		@media only screen and (max-width: 1000px) {
+			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column-start: auto;
+			grid-row-start: auto;	
 		}
 	}
 }
@@ -365,7 +530,7 @@
 			line-height: 50.4px;
 		}
 	}
-	
+
 	.review {
 		display: flex;
 		flex-grow: 1;
@@ -438,6 +603,12 @@
 			letter-spacing: 0.01em;
 			text-align: left;
 			color: #0000003D;
+
+			@media only screen and (max-width: 900px) {
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 16px;
+			}
 		}
 
 		&__more{
@@ -451,8 +622,13 @@
 			text-align: left;
 			text-transform: uppercase;
 			color: #0B766B;
-
 			transition: opacity .3s;
+
+			@media only screen and (max-width: 900px) {
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 18px;
+			}
 
 			@media (hover: hover) {
 				&:hover {
