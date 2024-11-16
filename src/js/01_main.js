@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	input.addEventListener("keydown", mask, false)
 });
 
-
 // слайдеры и контролы
 $(document).ready(function() {
 	var $slider = $('.slider-certificats');
@@ -231,25 +230,75 @@ $(document).ready(function() {
 	});
 });
 
+// $(document).ready(function() {
+// 	var $slider = $('.slider-news');
+
+// 	// Инициализация слайдера без элементов управления
+// 	$slider.slick({
+// 		dots: false,
+// 		infinite: true,
+// 		speed: 300,
+// 		arrows: false,           // Отключаем стрелки
+// 	});
+
+// 	// Обработчик нажатия на кнопку prev
+// 	$('.slider__controls-news-button--prew').on('click', function() {
+// 		$slider.slick('slickPrev');  // Переход к предыдущему слайду
+// 	});
+
+// 	// Обработчик нажатия на кнопку next
+// 	$('.slider__controls-news-button--next').on('click', function() {
+// 		$slider.slick('slickNext');  // Переход к следующему слайду
+// 	});
+// });
+
 $(document).ready(function() {
 	var $slider = $('.slider-news');
 
-	// Инициализация слайдера без элементов управления
-	$slider.slick({
-		dots: false,
-		infinite: true,
-		speed: 300,
-		arrows: false,           // Отключаем стрелки
-	});
+	function initializeSlider() {
+		$slider.slick({
+			dots: false,
+			infinite: true,
+			speed: 300,
+			arrows: false,
+		});
+	}
 
-	// Обработчик нажатия на кнопку prev
+	initializeSlider();
+
 	$('.slider__controls-news-button--prew').on('click', function() {
-		$slider.slick('slickPrev');  // Переход к предыдущему слайду
+		$slider.slick('slickPrev');
 	});
 
-	// Обработчик нажатия на кнопку next
 	$('.slider__controls-news-button--next').on('click', function() {
-		$slider.slick('slickNext');  // Переход к следующему слайду
+		$slider.slick('slickNext');
+	});
+
+	var isSliderActive = true;
+
+	$('.slider__more-news').on('click', function(e) {
+		e.preventDefault();
+
+		if (isSliderActive) {
+			$slider.slick('unslick');
+
+			$('.slider-news').css({
+				display: 'flex',
+				flexDirection: 'row',
+				flexWrap: 'wrap',
+				// gap: '30px'             // Устанавливаем gap здесь для flex
+			});
+
+			$('.slider__controls-news').hide(); // Скрываем контролы
+			$(this).text('СКРЫТЬ');
+		} else {
+			initializeSlider();
+			$('.slider-news').css({ display: 'block', gap: '0' }); // Сбрасываем gap
+			$('.slider__controls-news').show(); // Показываем контролы
+			$(this).text('Смотреть все статьи');
+		}
+
+		isSliderActive = !isSliderActive;
 	});
 });
 

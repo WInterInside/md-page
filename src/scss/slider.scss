@@ -215,6 +215,24 @@
 			}
 		}
 	}
+
+	.slider-news {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 32px;
+
+		@media only screen and (max-width: 1500px) {
+			gap: 16px;
+		}
+
+		@media only screen and (max-width: 1200px) {
+			gap: 8px;
+			.news__slide {
+				width: 100%;
+			}
+		}
+	}
 }
 
 .certificats {
@@ -397,8 +415,8 @@
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-		gap: 32px;
 		padding: 0 10px;
+		gap: 32px;
 
 		@media only screen and (max-width: 1500px) {
 			gap: 16px;
@@ -423,11 +441,11 @@
 		height: 100%;
 		grid-row: span 2 / span 2;
 		background-color: red;
-		
+
 		@media only screen and (max-width: 1000px) {
 			height: 150px;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 
 		@media only screen and (max-width: 796px) {
@@ -440,22 +458,21 @@
 		height: 100%;
 		grid-row: span 2 / span 2;
 		background-color: green;
-		
+
 		@media only screen and (max-width: 1000px) {
 			height: 150px;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
 
 	&__link:nth-child(3) {
 		grid-column: span 2 / span 2;
 		background-color: #000000;
-		
+
 		@media only screen and (max-width: 1000px) {
-			// grid-column: span 2; /* Все элементы занимают 2 колонки */
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
 
@@ -464,56 +481,56 @@
 		grid-column-start: 3;
 		grid-row-start: 2;
 		background-color: #0B766B;
-		
+
 		@media only screen and (max-width: 1000px) {
-			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column: span 2;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
-	
+
 	&__link:nth-child(5) {
 		grid-row-start: 3;
 		background-color: cadetblue;
-		
+
 		@media only screen and (max-width: 1000px) {
-			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column: span 2;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
 
 	&__link:nth-child(6) {
-		grid-column: span 2; /* Элемент займет 2 колонки */
+		grid-column: span 2;
 		grid-row-start: 3;
 		background-color: saddlebrown;
-		
+
 		@media only screen and (max-width: 1000px) {
-			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column: span 2;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
 
 	&__link:nth-child(7) {
 		grid-row-start: 3;
 		background-color: forestgreen;
-		
+
 		@media only screen and (max-width: 1000px) {
-			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column: span 2;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
 
 	&__link:nth-child(8) {
 		grid-row-start: 3;
 		background-color: lavenderblush;
-		
+
 		@media only screen and (max-width: 1000px) {
-			grid-column: span 2; /* Все элементы занимают 2 колонки */
+			grid-column: span 2;
 			grid-column-start: auto;
-			grid-row-start: auto;	
+			grid-row-start: auto;
 		}
 	}
 }
